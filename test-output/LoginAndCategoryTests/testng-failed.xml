@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [LoginAndCategoryTests]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="LoginTests(failed)">
+    <classes>
+      <class name="testing.Login_clean">
+        <methods>
+          <include name="loginwithinvalidemail"/>
+          <include name="loginWithInavalidCred"/>
+          <include name="driverssetup"/>
+          <include name="handleTestResult"/>
+          <include name="loginWithInavlidPass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testing.Login_clean -->
+    </classes>
+  </test> <!-- LoginTests(failed) -->
+  <test thread-count="5" parallel="methods" name="CategoryTests(failed)">
+    <classes>
+      <class name="testing.Category">
+        <methods>
+          <include name="category"/>
+          <include name="driverssetup"/>
+          <include name="getdata"/>
+          <include name="handleTestResult"/>
+          <include name="Addcategory"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testing.Category -->
+    </classes>
+  </test> <!-- CategoryTests(failed) -->
+</suite> <!-- Failed suite [LoginAndCategoryTests] -->

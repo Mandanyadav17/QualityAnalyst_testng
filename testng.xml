@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="login">
+	
+	
+  <test thread-count="5" name="base">
+	  
+	  
+	  <classes>   
+      <class name="testing.Login_clean"/>
+      <class name="testing.Category"/>
+       
+       
+    </classes>
+    
+    
+  </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->
