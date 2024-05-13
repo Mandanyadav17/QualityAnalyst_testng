@@ -18,8 +18,8 @@ public class Base {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("https://app.nextgenerationclean.com/login");
-           // String pageTitle = driver.getTitle();
-           // System.out.println("The current page title is: " + pageTitle);
+            String pageTitle = driver.getTitle();
+            System.out.println("The current page title is: " + pageTitle);
         } catch (Exception e) {
             System.err.println("Failed to initialize WebDriver: " + e.getMessage());
         }
