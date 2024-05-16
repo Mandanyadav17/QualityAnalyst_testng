@@ -1,4 +1,4 @@
-package testing;
+package corejavabasics;
 
 import java.time.Duration;
 
