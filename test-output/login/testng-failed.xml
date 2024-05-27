@@ -3,14 +3,18 @@
 <suite name="Failed suite [login]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="base(failed)">
     <classes>
+      <class name="testing.Scheduler">
+        <methods>
+          <include name="driversSetup"/>
+          <include name="navigatetoscheduler"/>
+          <include name="login"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testing.Scheduler -->
       <class name="testing.Category">
         <methods>
-          <include name="loginwithinvalidemail"/>
-          <include name="loginWithInavalidCred"/>
           <include name="driversSetup"/>
-          <include name="getdata"/>
           <include name="login"/>
-          <include name="loginWithInavlidPass"/>
           <include name="Addcategory"/>
           <include name="tearDown"/>
         </methods>

@@ -7,8 +7,9 @@
 	  
 	  
 	  <classes>   
-      <class name="testing.Login_clean"/>
+      <class name="testing.Login"/>
       <class name="testing.Category"/>
+      <class name="testing.Scheduler"></class>
        
        
     </classes>

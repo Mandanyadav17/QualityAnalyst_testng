@@ -13,11 +13,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class Category extends Login_clean {
+public class Category extends Login {
 
     @Test(priority=1)
     public void category() {
-    	login();
+    	
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60)); // Increase wait time
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[normalize-space()='Category Management']")));
 
@@ -33,15 +33,17 @@ public class Category extends Login_clean {
         System.out.println("addcategory");
         driver.findElement(By.xpath("(//*[local-name()='svg'])[20]")).click();
 
-        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20)); // Reduce wait time for subsequent elements
-        wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"flex-col medium-gap\"]/label")));
-        driver.findElement(By.xpath("//div[@class=\"flex-col medium-gap\"]/label")).click();
+//       WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(40)); // Reduce wait time for subsequent elements
+//       wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"flex-col medium-gap\"]/label")));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+      //  driver.findElement(By.xpath("//div[@class=\"flex-col medium-gap\"]/label")).click();
 
         driver.findElement(By.xpath("//input[@placeholder=\"Enter category name\"]"))
               .sendKeys("painting");
 
-        WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(20)); // Reduce wait time for subsequent elements
-        wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type=\"submit\"]")));
+//        WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(20)); // Reduce wait time for subsequent elements
+//        wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type=\"submit\"]")));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
     }

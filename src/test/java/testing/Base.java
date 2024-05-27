@@ -30,7 +30,7 @@ public class Base {
 
     @AfterSuite
     public void tearDown() {
-            driver.quit();
+          driver.quit();
         }
     }
 
